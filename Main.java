@@ -68,6 +68,11 @@ public class Main {
             System.out.println("\nPatron 1 borrows a book:");
             patron1.borrowBook(book1, 1);
         }
+        // Patron 2 tries to borrow the same book
+        if (book1 != null && patron2 != null) {
+            System.out.println("\nPatron 2 tries to borrow the same book:");
+            patron2.borrowBook(book1, 1);
+        }
 
         // Patron 2 tries to borrow a different book
         if (book2 != null && patron2 != null) {
@@ -75,12 +80,7 @@ public class Main {
             patron2.borrowBook(book2, 1); // Now using book2
         }
 
-        // Patron 2 tries to borrow the same book
-        if (book1 != null && patron2 != null) {
-            System.out.println("\nPatron 2 tries to borrow the same book:");
-            patron2.borrowBook(book1, 1);
-        }
-
+        
         // Display borrowed books for Patron 1
         System.out.println("\nBooks borrowed by Patron 1:");
         for (Book book : patron1.getBorrowedBooks()) {
