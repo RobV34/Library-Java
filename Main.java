@@ -1,5 +1,12 @@
-
+/**
+ * Represents the main class to demonstrate library operations.
+ */
 public class Main {
+    /**
+     * The main method to execute library operations.
+     *
+     * @param args The command-line arguments.
+     */
     public static void main(String[] args) {
         // Create library and initialize it with data
         Library library = new Library();
@@ -9,6 +16,11 @@ public class Main {
         performTransactions(library);
     }
 
+    /**
+     * Initializes the library with authors, books, and patrons.
+     *
+     * @param library The library to initialize.
+     */
     private static void initializeLibrary(Library library) {
         // Create authors
         Author author1 = new Author("J.K. Rowling", "31 July 1965");
@@ -53,9 +65,13 @@ public class Main {
         library.addPatron(patron3);
         library.addPatron(patron4);
         library.addPatron(patron5);
-
     }
 
+    /**
+     * Performs borrowing and returning book transactions in the library.
+     *
+     * @param library The library to perform transactions.
+     */
     private static void performTransactions(Library library) {
         // Retrieve books and patrons by their details
         Book book1 = library.searchBook("Harry Potter and the Philosopher's Stone");
@@ -80,7 +96,6 @@ public class Main {
             patron2.borrowBook(book2, 1); // Now using book2
         }
 
-        
         // Display borrowed books for Patron 1
         System.out.println("\nBooks borrowed by Patron 1:");
         for (Book book : patron1.getBorrowedBooks()) {
@@ -115,3 +130,4 @@ public class Main {
         }
     }
 }
+
