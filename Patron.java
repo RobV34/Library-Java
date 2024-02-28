@@ -99,7 +99,7 @@ public class Patron {
     /**
      * Allows the patron to borrow a specified number of copies of a book.
      *
-     * @param book          The book to borrow.
+     * @param book           The book to borrow.
      * @param numberOfCopies The number of copies to borrow.
      */
     public void borrowBook(Book book, int numberOfCopies) {
@@ -110,7 +110,7 @@ public class Patron {
     /**
      * Allows the patron to return a specified number of copies of a borrowed book.
      *
-     * @param book          The book to return.
+     * @param book           The book to return.
      * @param numberOfCopies The number of copies to return.
      */
     public void returnBook(Book book, int numberOfCopies) {
@@ -118,4 +118,3 @@ public class Patron {
         borrowedBooks.remove(book);
     }
 }
-
